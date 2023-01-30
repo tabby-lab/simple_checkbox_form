@@ -10,19 +10,21 @@
     
 <form>
     
-    <div class='foods'>
+    <div class='foods' style='text-align: center;'>
         <h1>What foods do you like?</h1>
         <input type='checkbox' value='Tacos'>Tacos<br>
         <input type='checkbox' value='Pizza'>Pizza<br>
-        <input type='checkbox' value='Burgers'>Burger<br>
-
+        <input type='checkbox' value='Burgers'>Steak<br>
+        <br>
+        <button type='submit'>Yum</button>
     </div>
+    <br>
 
-    <button type='submit'>Yum</button>
+
 
 </form>
 
-<!-- prevent default behavior first/get value from the checkboxes and iterate through all -->
+<!-- prevent default behavior first/get value from the checkboxes and iterate through all/save in foods arr -->
 <script>
     const form = document.querySelector('form');
 
