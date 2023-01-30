@@ -10,11 +10,11 @@
     
 <form>
     
-    <div class='food'>
+    <div class='foods'>
         <h1>What foods do you like?</h1>
         <input type='checkbox' value='Tacos'>Tacos<br>
-        <input type='checkbox' value='Tacos'>Pizza<br>
-        <input type='checkbox' value='Tacos'>Burger<br>
+        <input type='checkbox' value='Pizza'>Pizza<br>
+        <input type='checkbox' value='Burgers'>Burger<br>
 
     </div>
 
@@ -22,12 +22,21 @@
 
 </form>
 
+<!-- prevent default behavior first/get value from the checkboxes and iterate through all -->
 <script>
     const form = document.querySelector('form');
 
-    form.addEventListener('submit', () => {
-
-        
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+ 
+        let foods = [];
+        document.querySelectorAll('[type="checkbox"]').forEach(item => {
+            if (item.checked === true) {
+                foods.push(item.value);
+            }
+        })
+           
+        console.log(foods)
     })
 
 </script>
